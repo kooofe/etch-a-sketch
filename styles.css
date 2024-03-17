@@ -1,0 +1,15 @@
+.main-container{
+    background-color: blueviolet;
+    width: 800px;
+    margin: auto;
+}
+.item_row{
+    display: flex;
+}
+
+.item{
+    flex: 1;
+    height: 50px;
+    background-color: aliceblue;
+    outline: blue solid 2px;
+}
