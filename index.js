@@ -12,3 +12,11 @@ for (let i = 0; i < 16; i++) {
     item_row.classList.add("item_row");
     main_container.appendChild(item_row);
 }
+
+const grid_pixels = document.querySelectorAll(".item");
+
+grid_pixels.forEach((pixel) => {
+    pixel.addEventListener('mouseover',() => {
+       pixel.classList.add("color");
+    });
+});
