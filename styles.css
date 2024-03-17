@@ -1,15 +1,24 @@
-.main-container{
-    background-color: blueviolet;
+/*button */
+.grid_size-btn {
+    margin: auto;
+}
+
+/*main*/
+.main-container {
     width: 800px;
     margin: auto;
 }
-.item_row{
+
+.item_row {
     display: flex;
 }
 
-.item{
+.item {
     flex: 1;
     height: 50px;
-    background-color: aliceblue;
-    outline: blue solid 2px;
+    outline: black solid 1px;
+}
+
+.color {
+    background-color: blueviolet;
 }
