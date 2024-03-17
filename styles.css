@@ -1,21 +1,21 @@
 /*button */
-.grid_size-btn {
+.grid-size-btn {
     margin: auto;
 }
 
 /*main*/
 .main-container {
-    width: 800px;
     margin: auto;
+    max-width: 800px;
 }
 
 .item_row {
     display: flex;
+    justify-content: center;
 }
 
 .item {
-    flex: 1;
-    height: 50px;
+    flex: 1 1 auto;
     outline: black solid 1px;
 }
 
