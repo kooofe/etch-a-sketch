@@ -1,5 +1,13 @@
-const size_change_btn = document.querySelector(".grid-size-btn");
 const main_container = document.querySelector('.main-container');
+const size_change_btn = document.querySelector('.grid-size-btn');
+const color_randomize_btn = document.querySelector('.color-randomize-btn');
+const clear_canvas_btn = document.querySelector('.clear-canvas');
+
+let randomize = false
+
+function randomColor() {
+    return Math.floor(Math.random() * 255)
+}
 
 size_change_btn.addEventListener('click', function () {
     main_container.innerHTML = ''
@@ -8,15 +16,16 @@ size_change_btn.addEventListener('click', function () {
     create_grid(grid_size)
 });
 
-const color_randomize_btn = document.querySelector('.color-randomize-btn');
-let randomize = false
 color_randomize_btn.addEventListener('click', function () {
     randomize = !randomize;
 });
 
-function randomColor() {
-    return Math.floor(Math.random() * 255)
-}
+clear_canvas_btn.addEventListener('click', function (){
+    const pixels = document.querySelectorAll(".item");
+    pixels.forEach((pixel) => {
+        pixel.style.background = 'white'
+    });
+});
 
 function create_grid(grid_length) {
     const cellSize = 800 / grid_length;
@@ -46,4 +55,5 @@ function create_grid(grid_length) {
     });
 }
 
+// initial canvas
 create_grid(16)
